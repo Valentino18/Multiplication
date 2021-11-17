@@ -1,27 +1,31 @@
-# Multiplication
+Introduction 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+Objectif
+On souhaite concevoir une application web qui affiche une table de multiplication (1 à 10), selon une valeur soumise par l’utilisateur
 
-## Development server
+Pour la partie 1,
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+On devra faire une application sur une page qui consistera à afficher les tables de multiplications.
 
-## Code scaffolding
+On crée alors un projet "ng new multiplication --style=css --routing=false" puis on mettra le formulaire dans app component.html
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![](img/img1.PNG)
 
-## Build
+Puis on créera un nouveau composannt que je vais appeler table-multiplications la commande est  "ng generate component components/table-multiplications".
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+C'est dans ce composant qu'on tapera le code qui affichera la table de multiplication faites par le formulaire.
 
-## Running unit tests
+![](img/img2.PNG)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Dans le table-multiplication.component.ts on fait la réception de données du composant parent à l’enfant, le rôle du decorateur. le @input qui nous permettra de faire rentrée des données dans le système informatique. Il faudra rajouter le "input" pour qu'il soit active.
+![](img/img3.PNG)  
 
-## Running end-to-end tests
+Pour faire afficher ce résultat dans le app.component.html la page principal on a mis dans le formulaire ce code ce qui va nous permettre de recuperer le resultat du code de la multiplication au moment ou on va envoyer la valeur choisi.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![](img/img4.PNG)  
 
-## Further help
+Dans app.component.ts nous allons la valeur par le parent.Il faudra rajouter output et EvenEmitter import { Component, "Output, EventEmitter", OnInit } from '@angular/core';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![](img/img5.PNG)  
+
+
